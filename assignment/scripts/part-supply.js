@@ -45,10 +45,28 @@ for (let i=0; i<supplyChanges.length; i++){
 console.log('---  Stretch Goals  ---');
 // 7. Rewrite the `for` loop from #6 as a `for of` loop. 
 console.log('7. Showing supplyChanges with "for of" loop');
+let k = 0;
+for (let x of supplyChanges) {
+    if(supplyChanges[k] < 0){
+        console.log("Removed " + x + " parts.");
+    }else if(supplyChanges[k] > 0){
+        console.log("Added " + x + " parts.");
+    }else{
+        console.log('No changes.');
+    } 
+    k ++;
+  
+}
 
 // 8. Write a loop to determine the total number of parts available by
 //    adding up all the numbers in the 'supplyChanges' array.
 console.log('8. Total supplies available is:');
+
+k=0;
+for(let x of supplyChanges) {
+    k+=x
+    console.log('Parts available: ' + k)
+}
 
 // 9. We have a large stash of parts in our warehouse that we 
 //    need to box up and get ready for shipment. 
