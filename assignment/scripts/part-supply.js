@@ -87,7 +87,6 @@ while (parts > 0){
     } else{
         box++;
         partsNeeded=7;
-}
-
+    }
 }
 console.log('number of boxes is: ' + box);
